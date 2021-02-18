@@ -24,21 +24,21 @@ public class Queue {
 		int heap_size = A.length; // 원래는 -1을 해줘야 하지만 데이터 삽입으로 1증가
 		A[heap_size] = key;
 		int i = heap_size;
-		//부모 노드,,,
+		//부모 노드를 어떻게 표현,,,,,????
 		while( i > 1 ) {
 			
 		}
 	}
 	
 	private static int Extract_Max(int A[]) {
-		int heap_size = A.length;
+		int heap_size[A];
 		//에외처리
-		if(heap_size < 1) {
+		if(heap_size[A] < 1) {
 			System.out.println("Error");
 		}
 		int max = A[1]; //최댓값
-		A[1] = A[heap_size]; //마지막 노드의 값을 루트 자리로 옮김
-		// 노드 하나 삭제
+		A[1] = A[heap_size[A]]; //마지막 노드의 값을 루트 자리로 옮김
+		heap_size[A] = heap_size[A]-1;// 노드 하나 삭제
 		MaxHeapify(A, 1);
 		return max;
 	}
